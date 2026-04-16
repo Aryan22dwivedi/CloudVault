@@ -1,0 +1,53 @@
+open docker engine
+    on the root file run 
+
+             docker compose up -d 
+
+    for only shutting for docker containers 
+
+               docker compose down 
+
+    for complete shut down of docker containers and deletion of data use
+    
+                docker compose down -v
+
+if not using AWS               
+go on the minio(localhost appear on the terminal ) 
+
+
+  Go to http://localhost:9001 in your browser.
+
+    login with 
+            id-minioadmin
+            pass-minioadmin
+
+            create a bucket and name it as 'demo-bucket'
+if using AWS
+    go to backend 
+            make 'false' insted of 'true' 
+            and entre the required keys on the place 
+            your storage automatically shift on the AWS
+        (i think there you also have to create a bucket or something [seatch it on LLM])
+
+on cmd for the backend 
+       cd backend
+       intiate virtual env 
+           venv\Scripts\activate 
+
+
+            to check the bucket, if not created it will create by itself
+           python init_storage.py
+
+           uvicorn app.main:app --reload
+     when backend is running 
+
+on cmd for the frontend 
+    cd frontend
+    npm run dev 
+    
+
+
+
+
+
+ 

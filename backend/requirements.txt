@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+boto3
+python-multipart
+pytesseract
+pillow
+
+# cd backend
+# python -m venv venv
+# # Windows Activation:
+# venv\Scripts\activate
+
+# to run the server : uvicorn app.main:app --reload
